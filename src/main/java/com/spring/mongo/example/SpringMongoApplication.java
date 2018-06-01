@@ -34,7 +34,7 @@ public class SpringMongoApplication {
 
 	
 	@GetMapping("/test")
-	public String getAll() {
+	public String test() {
 		return "Deployed...";
 	}
 	
