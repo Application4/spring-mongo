@@ -32,6 +32,12 @@ public class SpringMongoApplication {
 		return repository.findAll();
 	}
 
+	
+	@GetMapping("/test")
+	public String getAll() {
+		return "Deployed...";
+	}
+	
 	public static void main(String[] args) {
 		SpringApplication.run(SpringMongoApplication.class, args);
 	}
