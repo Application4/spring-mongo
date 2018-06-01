@@ -14,13 +14,12 @@ import com.spring.mongo.example.dao.EmployeeRepository;
 import com.spring.mongo.example.model.Employee;
 
 @SpringBootApplication
-@RestController("/EMS")
 public class SpringMongoApplication {
 
 	@Autowired
 	private EmployeeRepository repository;
 
-	@PostMapping("/save/{id}/{name}/{dept}/{salary}")
+	@GetMapping("/save/{id}/{name}/{dept}/{salary}")
 	public String save(@PathVariable int id, @PathVariable String name, @PathVariable String dept,
 			@PathVariable double salary) {
 		Employee employee = new Employee(id, name, dept, salary);
