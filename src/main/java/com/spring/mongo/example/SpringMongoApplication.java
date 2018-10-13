@@ -20,7 +20,7 @@ public class SpringMongoApplication {
 	@GetMapping("/save")
 	public String save(@RequestBody Employee employee) {
 		repository.save(employee);
-		return "Employee saved successfully...";
+		return "Employee saved successfully with id "+employee.getId();
 	}
 
 	@GetMapping("/getAll")
